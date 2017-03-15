@@ -75,9 +75,6 @@ def reprofits(inpimg):
 
 
 def fixMontageHeaders(infile,outfile,axes):
-	# Images produced by Montage do not have FREQ or STOKES axes
-	# or information about the restoring beam. This confuses things like PyBDSM
-	# infile provides the keywords to be written to outfile
 	inphdu = pyfits.open(infile)
 	inphdr = inphdu[0].header
 	outhdu = pyfits.open(outfile,mode='update')
