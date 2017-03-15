@@ -33,11 +33,11 @@ parser.add_option('-o','--out',dest='out',help='Name of final FITS image',defaul
 parser.add_option('-c','--cleanup',dest='cleanup',action='store_true',help='Remove temporary files (default = False)',default=False)
 
 (options,args) = parser.parse_args()
-ra_min = options.ra_min
-ra_max = options.ra_max
-dec_min = options.dec_min
-dec_max = options.dec_max
-ncpu = options.ncpu
+ra_min = float(options.ra_min)
+ra_max = float(options.ra_max)
+dec_min = float(options.dec_min)
+dec_max = float(options.dec_max)
+ncpu = int(options.ncpu)
 out = options.out
 cleanup = options.cleanup
 
@@ -100,8 +100,8 @@ def fixMontageHeaders(infile,outfile,axes):
 tempdir = tempname()
 os.system('mkdir -p '+tempdir+'/repro')
 
-ra_min_h = ac.decimal2hms(ra_min,delimiter=':')
-ra_max_h = ac.decimal2hms(ra_max,delimiter=':')
+# ra_min_h = ac.decimal2hms(ra_min,delimiter=':')
+# ra_max_h = ac.decimal2hms(ra_max,delimiter=':')
 
 downloads = []
 
