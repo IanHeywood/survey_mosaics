@@ -70,7 +70,6 @@ def reprofits(inpimg):
         outputimg = 'repro/'+inpimg.rstrip('.fits')+'.repro.fits'
         cmd = 'mProject '+inpimg+' '+outputimg+' template.hdr'
         print inpimg,'--->',outputimg
-        print cmd
         os.system(cmd)
 
 
