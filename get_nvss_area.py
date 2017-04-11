@@ -9,7 +9,7 @@
 # It also requires the nvss_fields.p pickle.
 #
 # ian.heywood@csiro.au
-# 15 March 2017
+# 11 April 2017
 #
 #----------------------------------------------------------------------
 
@@ -19,6 +19,7 @@ import os
 import glob
 import string
 import random
+import pyfits
 from multiprocessing import Pool
 from astLib import astCoords as ac
 from optparse import OptionParser
