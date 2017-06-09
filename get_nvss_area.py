@@ -100,9 +100,6 @@ def fixMontageHeaders(infile,outfile,axes):
 tempdir = tempname()
 os.system('mkdir -p '+tempdir+'/repro')
 
-# ra_min_h = ac.decimal2hms(ra_min,delimiter=':')
-# ra_max_h = ac.decimal2hms(ra_max,delimiter=':')
-
 downloads = []
 
 for field in fields:
