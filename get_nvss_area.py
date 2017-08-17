@@ -131,12 +131,13 @@ os.system('mImgtbl . images.tbl')
 os.system('mMakeHdr images.tbl template.hdr')
 
 fitslist = glob.glob('*_crop.fits')
-proclist = []
-for infits in fitslist:
-	opfits = 'repro/'+infits.replace('.fits','_repro.fits')
-	proclist.append(infits)
+#proclist = []
+#for infits in fitslist:
+#	opfits = 'repro/'+infits.replace('.fits','_repro.fits')
+#	proclist.append(infits)
 pool = Pool(processes=ncpu)
-pool.map(reprofits,proclist)
+#pool.map(reprofits,proclist)
+pool.map(reprofits,fitslist)
 
 os.chdir('repro')
 os.system('mImgtbl . images.tbl')
