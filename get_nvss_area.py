@@ -144,6 +144,6 @@ os.system('mImgtbl . images.tbl')
 os.system('mAdd images.tbl ../template.hdr '+out)
 os.system('mv '+out+' ../../')
 os.chdir('../../')
-fixMontageHeaders(tempdir+'/'+downloads[0]+'_crop.fits',out)
+fixMontageHeaders(tempdir+'/'+downloads[0]+'_crop.fits',out,[3,4])
 if cleanup:
 	os.system('rm -rf '+tempdir)
